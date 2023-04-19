@@ -26,7 +26,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 /* End temporary styles */
 
 .tall-50 { min-height: 50vh; }
@@ -48,7 +47,12 @@ html {
 
 .padded-0 { padding: 0; }
 .padded-b-0 { padding-bottom: 0; }
+
 .margin-b-0 { margin-bottom: 0; }
+.margin-b-1 { margin-bottom: 1rem; }
+.margin-b-2 { margin-bottom: 2rem; }
+
+.landscape { padding-bottom: 60%; }
 
 
 .bg-rust     { background-color: #d3b4a2; }
@@ -124,8 +128,10 @@ a:hover { color: #a2745c; }
     font-size: 0.9rem;
 }
 
-
-
+.emphasis {
+    font-size: 1.1rem;
+    font-weight: 400;
+ }
 
 /* Header & Footer  */
 
@@ -137,6 +143,43 @@ footer a:hover {
     color: #d3b4a2; 
 }
 
+/* Contact Form */
+form input,
+form textarea {
+ 	width: 100%;
+ 	margin: 0.5rem 0;
+	padding: 0.5rem;
+ 	border: 2px solid #a2745c;
+ 	outline: none;
+ 	font-family: inherit;
+ 	font-size: 0.9rem;
+}
+
+form input:focus,
+form textarea:focus {
+ 	border-color: #9b9b81;
+}
+
+textarea {
+ 	min-height: 4rem;
+}
+
+form label {
+	margin-top: 1rem;
+ 	display: block;
+ 	color: #a2745c;
+ 	font-weight: bold;
+}
+
+form .button {
+   	border: 2px solid #a2745c;
+   	background: none;
+   	color: #a2745c;
+   	font-weight: bold;
+   	padding: 0.5rem 2rem;
+   	margin-top: 1rem;
+}
+
 /* Icon Grid Section  */
 .icon-section img {
     max-width: 3rem;
@@ -144,6 +187,21 @@ footer a:hover {
     margin: 1rem 0;
 }
 
+/* Newsletter Include */
+.right-arrow {
+	max-width: 2rem;
+	margin-left: 1rem;
+	margin-top: 0.2rem;
+}
+
+/* Responsive video */
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+ }
 
 /* Background Images */
 
@@ -171,6 +229,24 @@ footer a:hover {
     background-image: url('/images/mockup.jpg');
 }
 
+.profile-image {
+    border-radius: 100%;
+ }
+
+/* The following styles should go under the Utility Classes */
+.capped-width {
+    max-width: 1000px;
+    margin: auto;
+ }
+ 
+ .capped-width-narrow {
+    max-width: 900px;
+    margin: auto;
+ }
+ 
+ .flex-flip-alternate:nth-child(even) {
+    flex-direction: row-reverse;
+ }
 
 /* SM - max-width in pixels approximately 768px */
 @media(max-width: 48em) {
